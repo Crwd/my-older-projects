@@ -1,0 +1,19 @@
+{
+	"NAV_HOME": "Home",
+	"NAV_LANGUAGE": "Language",
+	"NAV_FAQ": "FAQ",
+	"NAV_LOBBY": "Lobby",
+	"LANG_EN": "English",
+	"LANG_DE": "Deutsch",
+	"LOBBY_CREATE_BUTTON": "Create",
+	"LOBBY_CREATE_TITLE": "Start a new lobby",
+	"LOBBY_CHAT_USER_JOINED": "User {name} joined",
+	"LOBBY_CHAT_USER_LEFT": "User {name} has left the lobby",
+	"LOBBY_CHAT_MESSAGE_TOO_LONG": "The message is too long",
+	"LOBBY_SPAM_PROTECTION_TITLE": "Spam protection",
+	"LOBBY_SPAM_PROTECTION_TEXT": "You have sent already a message recently",
+	"LOBBY_CHAT_INPUT_PLACEHOLDER": "Message",
+	"PLAYER_SPEED": "Speed",
+	"PLAYER_QUALITY": "Quality",
+	"FOOTER_DESC": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. "
+}

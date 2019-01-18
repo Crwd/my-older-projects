@@ -1,0 +1,266 @@
+<% include templates/head.tpl %>
+
+<script>
+	var LOBBY_ID = <%= lobbyID %>;
+	var LOBBY_CODE = "<%= lobby %>";
+</script>
+
+<body>
+	<% include templates/navi.tpl %>
+
+	<div class="content">
+		<div class="container">
+			<div class="row lobby">
+				<div class="col-md-12 nopadding">
+					<h2 class="display-4 lobby-title"></h2>
+				</div>
+
+				<div class="col-md-7">
+					<div class="row lobby-player">
+						<div id="video-player"></div>
+					</div>
+
+					<div class="control-area">
+						<div class="row timeline">
+							<div class="col-md-12 timeline-bar"></div>
+						</div>
+
+						<div class="row player-controls">
+							<div class="col-md-1">
+								<button class="play-button control-item"><span class="glyphicon glyphicon-play"></span></button>
+							</div>
+
+							<div class="col-md-5">
+								<span class="player-time">00:00:00 / 00:00:00</span>
+							</div>
+
+							<div class="col-md-2 action-control offset-md-2 nopadding">
+								<button class="control-bar-button control-item"><span class="glyphicon glyphicon-volume-up"></span></button>
+								<div class="plop-area"><div class="volume-bar"></div></div>
+							</div>
+
+							<div class="col-md-2 action-control nopadding">
+								<button class="control-bar-button control-item"><span class="glyphicon glyphicon-cog"></span></button>
+								<div class="plop-area settings-menu">
+									<ul>
+										<li menu="1"><%= __("PLAYER_QUALITY") %></li>
+										<li menu="2"><%= __("PLAYER_SPEED") %></li>
+
+										<div menu="1" class="menu-box quality-levels">
+											<ul></ul>
+										</div>
+
+										<div menu="2" class="menu-box speed-levels">
+											<ul></ul>
+										</div>
+									</ul>
+								</div>
+							</div>
+
+							<div class="col-md-2 action-control open-fullscreen nopadding">
+								<button class="control-bar-button control-item"><span class="glyphicon glyphicon-fullscreen"></span></button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-5 lobby-chat">
+					<div class="row user-list">
+						<div class="col-md-12 user-profile-area">
+							<div class="user-profiles">
+							</div>
+
+							<div class="user-paddles">
+								<button class="left-paddle paddle"><span class="glyphicon glyphicon-triangle-left"></button>
+								<button class="right-paddle paddle"><span class="glyphicon glyphicon-triangle-right"></button>
+							</div>
+						</div>
+					</div>
+
+					<div class="row chat-box">
+						<div class="col-md-12">
+							<ul>
+							</ul>
+						</div>
+					</div>
+
+					<div class="row chat-form">
+						<div class="col-md-12">
+							<form id="chat-form">
+								<input type="text" class="input-message form-block form form-control" maxlength="<%= settings.CHAT_MESSAGE_MAX_LENGTH %>" autocomplete="off" placeholder="<%= __('LOBBY_CHAT_INPUT_PLACEHOLDER') %>" />
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row video-selection">
+				<div class="col-md-7">
+					<div class="row video-browser-area">
+						<div class="col-md-12 video-browser">
+							<div class="row title-header">
+								 <div class="col-md-12 browser-title">
+							       <h4>Video browser</h4>
+							    </div>
+							</div>
+
+							<div class="row">
+								 <div class="col-md-12 search-bar">		
+								 	<form id="search-form">				   
+								        <div class="input-group">
+								            <input type="search" class="form-control search-input" placeholder="Search" />
+								            <span class="input-group-addon search-button">
+								                <i class="glyphicon glyphicon-search"></i>
+								            </span>
+								        </div>
+								   	</form>
+								</div>
+
+							</div>
+
+							<div class="row video-list">
+								<div class="col-md-12">
+									<span class="text-center search-status">No videos found</span>
+								</div>
+							</div>
+
+							<div class="row load-more">
+								<div class="col-md-12">
+									<button class="btn load-more-action btn-block btn-default">Load more</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-5 video-browser-area">
+					<div class="row">
+						<div class="col-md-12 video-browser">
+							<div class="row title-header">
+								<div class="col-md-12 browser-title">
+							       <h4>Video list</h4>
+							    </div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-12 video-history">
+									<ul class="nav nav-tabs" role="tablist">
+										<li class="nav-item">
+											<a class="nav-link active" data-toggle="tab" href="#playlist" role="tab"><span class="glyphicon glyphicon-list"></span> Playlist</a>
+										</li>
+
+										<li class="nav-item">
+											<a class="nav-link" data-toggle="tab" href="#history" role="tab"><i class="glyphicon glyphicon-time" aria-hidden="true"></i> History</a>
+										</li>
+
+										<div class="shuffle-box">
+											<input type="checkbox" id="switch-checkbox" name="shuffle" checked /><span> Shuffle</span>
+										</div>
+									</ul>
+
+									<div class="tab-content">
+										<div class="tab-pane history-videos" id="history" role="tabpanel">
+											<ul></ul>
+										</div>
+
+										<div class="tab-pane active playlist-list" id="playlist" role="tabpanel">
+											<div class="row">
+												<div class="col-md-12">
+													<div class="input-group">
+											            <select class="form form-control playlist-names"></select>
+
+											            <span class="input-group-addon playlist-settings">
+											                <i class="glyphicon glyphicon-cog"></i>
+											            </span>
+											        </div>
+												</div>
+											</div>
+
+											<div class="row playlist-videos">
+												<div class="col-md-12">
+													<ul class="video-sorting">
+														<!--
+														<li video-data="_iALWlTN4Sc">
+															<div class="video-thumb"><img src="https://i.ytimg.com/vi/_iALWlTN4Sc/hqdefault.jpg"></div>
+															<div class="video-title">
+																<span>Ali As feat. SXTN – Von den fernen Bergen (OFFICIAL VIDEO)</span><br><span class="selector">by Crowd</span>
+															</div>
+															<span class="glyphicon glyphicon-remove remove-video"></span>
+															<span class="glyphicon glyphicon-sort sort-video"></span>
+														</li>
+
+														<li video-data="_iALWlTN4Sc">
+															<div class="video-thumb"><img src="https://i.ytimg.com/vi/_iALWlTN4Sc/hqdefault.jpg"></div>
+															<div class="video-title">
+																<span>Ali As feat. SXTN – Von den fernen Bergen (OFFICIAL VIDEO)</span><br><span class="selector">by Crowd</span>
+															</div>
+															<span class="glyphicon glyphicon-remove remove-video"></span>
+															<span class="glyphicon glyphicon-sort sort-video"></span>
+														</li>
+
+														-->
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade playlist-manager" id="modal-playlists" tabindex="-1" role="dialog" aria-labelledby="modal-playlistsLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="modal-playlistsLabel">Manage Playlists</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12 create-bar">		
+						 	<form id="search-form">				   
+						        <div class="input-group">
+						            <input type="text" class="form-control playlist-add-input" placeholder="Playlist name" />
+						            <span class="input-group-addon add-playlist">
+						                Add Playlist
+						            </span>
+						        </div>
+						   	</form>
+						</div>
+
+						<div class="col-md-12 playlist-manage-list">
+							<table class="table table-inverse">
+								<thead>
+									<tr>
+										<th>Playlist</th>
+										<th></th>
+									</tr>
+								</thead>
+
+								<tbody class="playlist-table"></tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-spotify" data-dismiss="modal">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="/public/js/profile-list.js"></script>
+	<script src="/public/js/lobby-client.js"></script>
+	<% include templates/lobby-connection.tpl %>
+
+	<% include templates/footer.tpl %>
+</body>

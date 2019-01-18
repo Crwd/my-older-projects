@@ -1,0 +1,48 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<title>Socket.IO ~ Chat</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.slim.js"></script>
+
+	 <!-- Bootstrap -->
+    <link rel="stylesheet" href="/public/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="/public/css/style.css" type="text/css" /> 
+</head>
+<body>
+	<div class="container">
+		<h4>Socket.IO Chat</h4>
+		<div class="row">
+			<div class="col-md-8">
+				<div class="shoutbox-messages">
+				</div>
+
+				<div class="shoutbox-messagefield">
+					<form id="msg-form">
+						<input type="text" class="msg-input" placeholder="Nachricht" autocomplete="off" />
+					</form>
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				<div class="lobby">
+					<div class="lobby-header">
+						<p>Lobby</p>
+					</div>
+
+					<div class="lobby-list">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="/public/js/bootstrap.min.js"></script>
+
+<script src="/public/js/chat.js"></script>
+
+</html>

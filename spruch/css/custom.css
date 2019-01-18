@@ -1,0 +1,178 @@
+/* 
+ @Project: SpruchUniversum
+ @Author: INCepted
+ @Version: 0.1.2
+ @Date: 04 Apr '16
+*/
+
+body {
+    background-color:#1e1e1e;
+}
+
+.headerContainer {
+    position:relative;
+    height:300px;
+}
+
+.container {
+    margin-top:50px;
+}
+
+.header {
+    background:url('images/background.jpg') no-repeat;
+    background-size:cover;
+    height:100%;
+    width:100%;
+    background-position: bottom; 
+    position:absolute;
+}
+
+.headerOverlay {
+    height:100%;
+    width:100%;
+    background:rgba(0,0,0,0.6);
+    position:absolute;
+}
+
+.headerOverlay .title {
+    font-family: 'Lobster', cursive;
+    font-size:3em;
+}
+
+.headerOverlay .quoteDay {
+    font-family: 'Lora', serif;
+    font-size:1.2em;
+    padding:10px;
+}
+
+.input-group-addon {
+    min-width:100px;
+}
+
+textarea {
+    box-shadow: inset 0 -1px 0px rgba(0,0,0,0) !important;
+    resize: none;
+}
+
+.underline input {
+    box-shadow: inset 0 -1px 0px rgba(0,0,0,0.3) !important;
+}
+
+.quoteBox {
+    background:#474747;
+    box-shadow: inset 3px 0 0 #4e5d6c !important;
+    transition: 0.1s margin ease-in;
+    -o-transition: 0.1s margin ease-in;
+    -ms-transition: 0.1s margin ease-in;
+    -moz-transition: 0.1s margin ease-in;
+    -webkit-transition: 0.1s margin ease-in;
+    margin-bottom:15px;
+    padding-bottom:5px;
+}
+
+.quoteBox:hover {
+    margin-left:10px;
+    box-shadow: inset 3px 0 0 #5cb85c !important;
+}
+
+.quoteHeader .headline {
+    font-style:italic;
+    font-size:0.7em;
+    color:#909090;
+    line-height:2em;
+    margin-top:5px;
+    /* border-bottom:1px #909090 dotted */;
+}
+
+.quoteBox > .content {
+    
+}
+
+.loadmore {
+    width:100%;
+}
+
+.postButton {
+}
+
+.quoteDay {
+    margin-top:15px;
+    background:#474747;
+    box-shadow: inset 5px 0 0 #ffcc00 !important;
+    transition: 0.1s all ease-in;
+    -o-transition: 0.1s all ease-in;
+    -ms-transition: 0.1s all ease-in;
+    -moz-transition: 0.1s all ease-in;
+    -webkit-transition: 0.1s all ease-in;
+    margin-bottom:15px;
+    padding-bottom:5px;
+}
+
+.quoteDay p {
+    color:#ffcc00;
+    /* These are technically the same, but use both */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    -ms-word-break: break-all;
+    /* This is the dangerous one in WebKit, as it breaks things wherever */
+    word-break: break-all;
+    /* Instead use this non-standard one: */
+    word-break: break-word;
+
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+.quoteDay span {
+    color:#bbbbbb;
+    font-size:0.8em;
+}
+
+.quote-of-day {
+    margin-top:50px;
+}
+
+.welcome {
+    margin-top:80px;
+}
+
+.quoteStats > p > .likeCount {
+    color:#5cb85c;
+}
+
+.quoteStats > p > .likeIcon:hover {
+    color:#5cb85c;
+    cursor:pointer;
+}
+
+.bgSuccess {
+    background:#5cb85c;
+}
+
+.colorSuccess {
+    color:#5cb85c;
+}
+.borderSuccess {
+    border-color:#5cb85c;
+}
+
+.colorError {
+    color:#d9534f;
+}
+
+.bgError {
+    background:#d9534f;
+}
+
+.quoteContent {
+    line-height:1em;
+}
+
+footer {
+    margin-bottom:20px;
+    color:#bbbbbb;
+}

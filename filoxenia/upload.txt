@@ -1,0 +1,18 @@
+- Users
+ -> Name, Rank, Mail, Passwort ändern
+
+- Functions++++++++++++++++++++++++++
+
+Updaten:
+- Admin/core/general.php -> change ++++++++++++++++++
+- admin/inc/user.php -> link // Getuserrinfo // +++++++++++++++++
+- Admin/inc/change.php -> datei  ++++++++++
+- Admin/classes/user update functions ++++++++++
+
+
+
+
+TODO:
+- PayPal Fee (core/settings paypal fee + inc/payment.php) +++++
+- Domain anzeigen bei kunden DONE - inc/user_overview.php (Abfrage of ns empty und domain ausgeben) +++++++++
+- Nameserver setten (admin/inc/product und /request) ohne array etc. (DONE in beiden dateien bei input listung und submit)++++++++++++++

@@ -1,0 +1,96 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 2rem;
+}
+
+.shoutbox-messages {
+	padding:10px;
+	height:300px;
+	width:100%;
+	background:#3b3b3b;
+	box-shadow:0px 0px 5px rgba(0,0,0,0.8);
+	overflow: auto;
+	overflow-x:hidden;
+}
+
+.shoutbox-messages > li {
+	list-style:none;
+	margin-left:10px;
+}
+
+.shoutbox-messages > li .msg-date {
+	color:rgba(255,255,255,0.4);
+	font-size:11px;
+}
+
+
+.shoutbox-messages > li .msg-user {
+	color:#2fc1db;
+	font-size:12px;
+}
+
+.shoutbox-messages > li .msg-content {
+	color:white;
+	font-size:12px;
+}
+
+.shoutbox-messages > li .msg-status {
+	color:#9e9e9e;
+	font-size:11px;
+}
+
+.shoutbox-messagefield > form > .msg-input {
+	background:#3b3b3b;
+	width:100%;
+	border:none;
+	margin-top:10px;
+	height:50px;
+	padding:20px;
+	box-shadow:0px 0px 5px rgba(0,0,0,0.8);
+	color:white;
+}
+
+.lobby {
+	height:360px;
+	width:100%;
+	display:inline-block;
+	background:#3b3b3b;
+	box-shadow:0px 0px 5px rgba(0,0,0,0.8);
+}
+
+.lobby > .lobby-header {
+	height:50px;
+	width:100%;
+	background:#505050;
+	border-bottom:1px solid #808080;
+	text-align:center;
+	display:inline-block;
+}
+
+.lobby > .lobby-header > p {
+	color:#dedede;
+	font-size:12px;
+	margin-top:15px;
+}
+
+.lobby-list {
+	height:310px;
+	width:100%;
+	display:inline-block;
+	overflow: auto;
+	overflow-x:hidden;
+}
+
+.lobby-list > li {
+	list-style:none;
+	color:#b1b1b1;
+	font-size:20px;
+	padding:10px;
+	background:rgba(255,255,255,0.1);
+	border-bottom:1px solid #2f2f2f;
+
+}
+
+.lobby-list > li.me {
+	color:#2fc1db;
+}

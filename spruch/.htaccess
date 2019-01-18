@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# BASIC RULER - TemplateHandler
+RewriteRule ^(.*)$ index.php?site=$1

@@ -1,0 +1,9 @@
+module.exports = {
+	// GENERAL
+	DEFAULT_VIDEO: "tsSO6c4Nq5U",
+	DEFAULT_SPEED: 1,
+
+	// CHAT
+	CHAT_MESSAGE_MAX_LENGTH: 150,
+	CHAT_MESSAGE_SPAM_TIME: 3, // seconds
+}

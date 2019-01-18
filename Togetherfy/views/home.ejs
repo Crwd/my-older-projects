@@ -1,0 +1,55 @@
+<% include templates/head.tpl %>
+
+<body>
+	<% include templates/navi.tpl %>
+
+	<div class="content">
+		<header id="header">
+			<div class="front-header"></div>
+			<div class="row overlay-header">
+				<div class="col-md-4 offset-md-4">
+					<div class="lobby-header">
+						<div class="row">
+							<div class="col-md-10 offset-md-1 lobby-box">
+								<h4 class="text-center text-white lobby-title"><%= __("LOBBY_CREATE_TITLE") %></h4>
+
+								<form method="POST" action="/lobby/create">
+									<button class="btn btn-block btn-spotify">
+										<%= __("LOBBY_CREATE_BUTTON") %>
+									</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="container">
+			<div class="row welcome-area">
+				<div class="col-md-12">
+					<h3>Welcome on Togetherfy!</h3>
+					<p>
+					"My friends and I love Watch2Gether. We don't live near each other and we get to continue our tradition of watching some series of daily videos together every day. We've used it since launch and will continue every day!"
+					</p>
+				</div>
+
+				<!--
+				<div class="col-md-6 feature-list">
+					<div class="card card-inverse" style="background-color: #333; border-color: #333;">
+						<div class="card-header">
+
+						</div>
+
+						<div class="card-block">
+
+						</div>
+					</div>
+				</div>
+				-->
+			</div>
+		</div>
+	</div>
+
+	<% include templates/footer.tpl %>
+</body>
